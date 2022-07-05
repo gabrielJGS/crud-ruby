@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+<h1>Livros</h1>
+<%= link_to "Voltar", :back, class:"btn btn-secondary" %>
+<hr>
+<%= link_to "Novo livro", new_livro_path, class:"btn btn-primary"%>
+<div id="livros">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Livro</th>
+      <th scope="col">Editora</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @livros.each do |livro| %>
+      <tr>
+        <th scope="row"><%= livro.id%></th>
+        <td><%= livro.nome%></td>
+        <td><%= livro.editora%></td>
+        <td><%= livro.autor%></td>
+        <td><%= livro.preco%></td>
+        <td><%= link_to "Ver", livro, class: "btn btn-info" %></td>
+      </tr>
+      <%# <%= render livro %>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+

@@ -1,0 +1,26 @@
+<%# <%= render "form", livro: @livro %>
+<h1>Alterar livro</h1>
+<%= link_to "Voltar", livros_path, class:"btn btn-secondary" %>
+<hr> 
+<form action="/livros/<%=@livro.id%>" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
+  <div class="mb-3">
+    <label for="livro_nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" name="livro[nome]" id="livro_nome" value="<%= @livro.nome%>">
+  </div>
+  <div class="mb-3">
+    <label for="livro_editora" class="form-label">Editora</label>
+    <input type="text" class="form-control" name="livro[editora]" id="livro_editora" value="<%= @livro.editora%>">
+  </div>
+  <div class="mb-3">
+    <label for="livro_autor" class="form-label">Autor</label>
+    <input type="text" class="form-control" name="livro[autor]" id="livro_autor" value="<%= @livro.autor%>">
+  </div>
+  <div class="mb-3">
+    <label for="livro_preco" class="form-label">Preço</label>
+    <input type="number" class="form-control" name="livro[preco]" id="livro_preco" value="<%= @livro.preco%>">
+  </div>
+  <button name="commit" value="Update Livro" type="submit" class="btn btn-warning">Alterar livro</button>
+</form>
+
