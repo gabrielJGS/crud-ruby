@@ -1,4 +1,9 @@
 # README
+# Crud - Livros
+Repositório criado para testar o processo de CRUD na linguagem Ruby on Rails  
+Desenvolvido um cadastro de Livros  
+Aplicado um tema simples com bootstrap
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
